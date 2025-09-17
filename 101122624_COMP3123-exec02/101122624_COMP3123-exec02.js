@@ -87,4 +87,3 @@ car2.details();
 
 const sedan = new Sedan('Volvo SD', 2018, 30000);
 sedan.info();
-console.log()
