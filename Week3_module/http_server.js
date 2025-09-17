@@ -3,7 +3,7 @@ const students = require('./modules/students');
 
 const SERVER_PORT = 3000;
 const SERVER_HOST = "local";//127.0.0.
-// 
+
 const server = http.createServer((req,res) =>{
     console.log(req.method); //GET, POST, PUT, DELETE
     console.log(req.url);
