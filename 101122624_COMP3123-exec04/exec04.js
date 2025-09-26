@@ -30,9 +30,9 @@ app.post("/users",(req,res)=>{
     const array = [{firstname = "Pritesh", lastname = "Patel"},
             {firstname = "john", lastname = "doe"},
             {firstname = "jon", lastname= "rome"}
-        ] = req.body.users;
+        ] = req.body;
 
-    res.json(array);
+    res.send(array);
 });
 
 
