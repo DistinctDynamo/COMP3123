@@ -12,6 +12,7 @@ app.use('api/v1/user', userRouter);
 - Return home.html page to client
 */
 router.get('/home', (req,res) => {
+  app.use(express.static("home"))
   res.send('This is home router');
 });
 
@@ -21,7 +22,8 @@ Add error handling middleware to handle below error
 - Return 500 page with message "Server Error"
 */
 app.use((err,req,res,next) => {
-  res.send('This is error router');
+  res.status(500).send('Server Error');
+  //res.send('This is error router');
 });
 
 app.listen(process.env.port || 8081);
